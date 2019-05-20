@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAsset">등록</button>
+		<div class="modal" id="addAsset" tabindex="-1" role="dialog" aria-labelledby="addAssetModalLabel" aria-hidden="true">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header">
+        				<h5 class="modal-title" id="addAssetModalLabel">자산 등록</h5>
+        				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          					<span aria-hidden="true">&times;</span>
+       					</button>
+     				</div>
+     				<div class="modal-body">
+						<form>
+							<div class="form-group" id="section1">
+								<lable for="assetName">자산명</lable>
+								<input type="text" class="form-control" name="name" placeholder="Name">
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6" id="section2">
+									<lable for="assetType">자산유형</lable>
+									<select class="form-control" name="type">
+										<option selected>-Select-</option>
+										<option value="1">기록계</option>
+										<option value="2">전송계</option>
+										<option value="3">PCS</option>
+										<option value="4">DCS</option>
+										<option value="5">PC</option>
+										<option value="6">서버류</option>
+										<option value="7">기타</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<lable for="os" id="section3">운영체제</lable>
+									<select class="form-control" name="os">
+										<option selected>-Select-</option>
+										<option value="1">펌웨어</option>
+										<option value="2">전용OS</option>
+										<option value="3">범용OS</option>
+										<option value="4">기타</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<lable for="cif" id="section2">통신I/F</lable>
+									<select class="form-control" name="cif">
+										<option selected>-Select-</option>
+										<option value="1">하드와이어드 통신</option>
+										<option value="2">TCP/IP</option>
+										<option value="3">기타</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<lable for="function" id="section3">자산기능</lable>
+									<select class="form-control" name="function">
+										<option selected>-Select-</option>
+										<option value="1">Security</option>
+										<option value="2">Safety</option>
+										<option value="3">EP</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="comment" id="section4">부가설명</label><br>
+								<textarea class="form-control" name="comment" rows="5" placeholder="Comment"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button onclick="save()" class="btn btn-primary" id="save">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="test.js"></script>
+	</body>
+</html>
